@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2em 1fr 2em;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
