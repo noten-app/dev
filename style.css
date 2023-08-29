@@ -1,23 +1,81 @@
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2em 1fr 2em;
+    grid-template-rows: 3rem 1fr 2rem;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "nav"
         "main"
         "footer";
+    background-color: var(--background-color);
 }
 
 nav {
     grid-area: nav;
+    display: flex;
 }
 
-main {
-    grid-area: main;
+nav a,
+nav div {
+    flex-grow: 1;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    border: 0.5rem solid var(--background-color);
+    border-top: 0px;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--background2-color);
+    color: var(--text-color);
+    text-decoration: none;
 }
+
+nav a:first-child,
+nav div:first-child {
+    border-left: 0;
+    border-bottom-left-radius: 0;
+}
+
+nav a:last-child,
+nav div:last-child {
+    border-right: 0;
+    border-bottom-right-radius: 0;
+}
+
+nav a:hover,
+nav div:hover {
+    background-color: var(--background3-color);
+    color: var(--accent-color);
+}
+
+/* 
+Main
+*/
+
+#main {
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+Footer
+*/
 
 footer {
     grid-area: footer;
+    background-color: var(--background2-color);
+    display: grid;
+    place-items: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
