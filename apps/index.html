@@ -65,5 +65,13 @@
         </div>
       </div>
     </main>
+    <script>
+      // Check which app_names are overflowing
+      const app_names = document.getElementsByClassName("app_name");
+      Array.from(app_names).forEach((app_name) => {
+        if (app_name.offsetWidth < app_name.querySelector("span").scrollWidth)
+          app_name.querySelector("span").classList.add("scroll");
+      });
+    </script>
   </body>
 </html>
