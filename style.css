@@ -80,3 +80,24 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+
+/* Small screens */
+
+@media screen and (max-width: 580px) {
+
+    body {
+        grid-template-rows: min-content 1fr 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a,
+    nav div {
+        border: 0;
+        border-radius: 0;
+        padding: 0.5rem;
+    }
+}
